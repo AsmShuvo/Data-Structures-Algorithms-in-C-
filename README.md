@@ -5,32 +5,6 @@ This checklist helps in tracking progress while preparing for coding interviews 
 
 ---
 
-## 📂 Arrays
-- [ ] Multidimensional Arrays  
-- [ ] Pass-by-Value and Pass-by-Reference  
-- [ ] Dynamic Memory Allocation  
-
-## 📂 Functions
-- [ ] Pointer with Functions  
-
-## 📂 Maths
-- [ ] Bitwise Operator  
-- [ ] Bit Manipulation  
-- [ ] Prime Numbers Algorithms  
-- [ ] Square Root Algorithms  
-- [ ] HCF and LCM Algorithms  
-- [ ] Euclidean Algorithms  
-
-## 📂 Matrices
-- [ ] Matrices Problems  
-
-## 📂 Strings
-- [ ] String Algorithms  
-
-## 📂 Time Complexity and Space Complexity
-- [ ] Asymptotic Notation  
-- [ ] Time Complexity Calculation  
-- [ ] Understand Best, Worst, and Average Cases  
 
 ## 📂 Searching
 - [ ] Linear Search  
@@ -82,8 +56,6 @@ This checklist helps in tracking progress while preparing for coding interviews 
 - [ ] AVL Tree  
 - [ ] RB Tree  
 - [ ] B-Tree  
-- [ ] Splay Tree  
-- [ ] Huffman Coding  
 
 ## 📂 Heaps
 - [ ] Binary Heap  
@@ -110,8 +82,7 @@ This checklist helps in tracking progress while preparing for coding interviews 
 - [ ] Suffix Trie  
 
 ## 📂 Advanced Topics
-- [ ] Dynamic Programming  
-- [ ] Greedy Algorithms  
+- [ ] Dynamic Programming   
 - [ ] Backtracking Algorithms  
 - [ ] Disjoint Set  
 
