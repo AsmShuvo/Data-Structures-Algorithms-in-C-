@@ -26,7 +26,7 @@ int main()
     else
     {
         cout << "Not found" << endl;
-        return 0; // finish
+        return 0;
     }
 
     // lower bound :
