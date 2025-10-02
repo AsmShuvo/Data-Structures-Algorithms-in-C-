@@ -1,43 +1,43 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <climits>
 using namespace std;
 
-#define int long long int
-#define vii vector<int>
-#define pii pair<int, int>
-#define vpi vector<pair<int, int>>
-#define pb push_back
-#define YES cout << "YES" << endl
-#define Yes cout << "Yes" << endl
-#define yes cout << "yes" << endl
-#define NO cout << "NO" << endl
-#define No cout << "No" << endl
-#define no cout << "no" << endl
-#define bb begin()
-#define ee end()
-#define ss second
-#define ff first
-#define endl "\n"
-#define print(vec)         \
-    for (auto it : vec)    \
-        cout << it << " "; \
-    cout << endl;
-#define w(tc)  \
-    int tc;    \
-    cin >> tc; \
-    while (tc--)
-#define fastio()                      \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(nullptr)
+typedef long long ll;
 
-void bismillah()
-{
-
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    vector<int> a(n);
+    ll tot = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        tot += a[i];
+    }
+    sort(a.begin(), a.end());
+    
+    ll ans = LLONG_MAX;
+    
+    for (int i = 0; i < n; i++) {
+        if (i > 0 && a[i] == a[i-1]) continue;
+        int k = (m - a[i]) % m;
+        auto it = lower_bound(a.begin(), a.end(), m - k);
+        ll wc = a.end() - it;
+        ll cs = tot + (ll)n * k - (ll)m * wc;
+        ans = min(ans, cs);
+    }
+    
+    cout << ans << endl;
 }
 
-int32_t main()
-{
-    fastio();
-    w(tc)
-    bismillah();
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
     return 0;
 }

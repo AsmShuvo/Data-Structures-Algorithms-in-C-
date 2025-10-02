@@ -3,18 +3,14 @@ using namespace std;
 
 void bubbleSort(int arr[], int n) { 
     for (int i = 0; i < n - 1; i++) {
-        bool swapped = false;  // optimization flag
-
-        // Inner loop for comparisons
+        int isSwapped = 0;
         for (int j = 0; j < n - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
                 swap(arr[j], arr[j + 1]);
-                swapped = true;
+                isSwapped=1;
             }
         }
-
-        // If no swaps in this pass, array is already sorted
-        if (!swapped) break;
+        // if(isSwapped==0) break;
     }
 }
 
@@ -30,3 +26,6 @@ int main() {
 
     return 0;
 }
+
+
+// Time comp: O(n^2) Best case(sorted array): O(n) optimized
