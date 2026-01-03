@@ -1,0 +1,7 @@
+Download --> Open after download completed
+commands:
+Download then Open -->instruction -> OS
+Stack Memory: LIFO ---> LAST IN FIRST OUT
+
+[DOWNLOAD,OPEN] --> 
+
