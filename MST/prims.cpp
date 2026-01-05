@@ -3,10 +3,12 @@
 #include <queue>
 
 using namespace std;
+
 typedef pair<int, int> pii;
 
 int prims(int start_node, int V, vector<vector<pii>> &adj)
 {
+    // Min-heap: priority_queue<Type, Container, Comparator>
     priority_queue<pii, vector<pii>, greater<pii>> pq;
 
     vector<bool> visited(V, false);
