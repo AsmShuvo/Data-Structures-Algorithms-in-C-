@@ -16,7 +16,7 @@ void print()
 int main()
 {
     // push
-    st.push(5);
+    st.push(5); // O(1)
     st.push(51);
     st.push(192);
     st.push(69);

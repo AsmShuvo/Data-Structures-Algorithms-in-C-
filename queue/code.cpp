@@ -1,79 +1,51 @@
 #include <bits/stdc++.h>
 using namespace std;
-// push
-// pop
-// front
-// back
-// size
-// print
 
-const int sz = 100;
-int q[sz];
-int f = -1, b = -1;
-
-void push(int val)
+// memorization
+int memo[100][100];
+int knapsack(int W, vector<int> &wt, vector<int> &cost, int n)
 {
-    if (f == -1) // checking empty
-        f++;
-    b++;
-    q[b] = val;
-}
-
-void pop()
-{
-    if (f == -1)
+    if (W == 0 || n == 0)
+        return 0;
+    if (memo[n][W])
+        return memo[n][W];
+    if (wt[n - 1] > W)
     {
-        // warning
-        cout << "Queue is empty, nothing to pop";
-        return;
+        // dont take this
+        return memo[n][W] = knapsack(W, wt, cost, n - 1);
     }
-    f++;
-}
-
-int front()
-{
-    return q[f];
-}
-
-int back()
-{
-    return q[b];
-}
-
-int Size()
-{
-    return b - f + 1;
-}
-
-void print()
-{
-    while (f <= b)
+    else
     {
-        cout << q[f] << " ";
-        f++;
+        // take best one
+        int ans = max(knapsack(W, wt, cost, n - 1), cost[n - 1] + knapsack(W - wt[n - 1], wt, cost, n - 1));
+        memo[n][W] = ans;
+        return ans;
     }
-    cout << endl;
-    // reset
-    f = -1;
-    b = -1;
+}
+
+int knapsackTabulation(int W, vector<int> &wt, vector<int> &val, int n)
+{
+    vector<vector<int>> dp(n + 1, vector<int>(W + 1));
+    for (int i = 0; i <= n; i++)
+    {
+        for (int w = 0; w <= W; w++)
+        {
+            if (i == 0 || 0 == w)
+                dp[i][w] = 0;
+            else if (wt[i - 1] <= w)
+                dp[i][w] = max(dp[i - 1][w], val[i - 1] + dp[i - 1][w - wt[i - 1]]);
+            else
+                dp[i][w] = dp[i - 1][w];
+        }
+    }
+    return dp[n][W];
 }
 
 int main()
 {
-    push(2);
-    push(3);
-    push(4);
-
-    cout << front() << " " << back() << endl;
-    pop();
-    cout << front() << " " << back() << endl;
-    cout << Size() << endl;
-    push(3);
-    push(4);
-    push(8);
-    push(4);
-    print();
+    vector<int> wt = {2, 3, 2, 4}, cost = {10, 11, 5, 7};
+    int W = 8;
+    int n = cost.size();
+    cout << knapsack(W, wt, cost, n) << endl;
+    cout << knapsackTabulation(W, wt, cost, n) << endl;
 }
-
-// stack n 1 2 3 4 ...n top(n)
-// quue n 1 2 3 4 ...n front(1)

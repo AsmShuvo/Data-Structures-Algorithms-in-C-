@@ -28,7 +28,7 @@ int lisRecursive(const vector<int>& nums, int prev_idx, int curr_idx) {
 // 2. Top-Down DP (Memoization)
 // Time Complexity: O(N^2)
 // Space Complexity: O(N^2)
-int memo[2501][2501]; // N <= 2500
+vector<vector<int>> memo;
 int lisMemo(const vector<int>& nums, int prev_idx, int curr_idx) {
     if (curr_idx == nums.size()) return 0;
     
@@ -71,9 +71,7 @@ int main() {
 
     // Initialize memo table
     int n = nums.size();
-    for(int i=0; i<=n; ++i)
-        for(int j=0; j<=n; ++j)
-            memo[i][j] = -1;
+    memo.resize(n + 1, vector<int>(n, -1));
             
     cout << "LIS Length (Top-Down): " << lisMemo(nums, -1, 0) << endl;
 
