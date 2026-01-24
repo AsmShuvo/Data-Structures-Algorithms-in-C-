@@ -1,0 +1,16 @@
+LL
+array 
+
+searching- linear and binary
+sorting - bubble, selection, insertion, merge, quick
+
+stack
+queue
+set multiset
+map multimap
+heap
+priority queue
+-----------------
+
+graphs and tree
+

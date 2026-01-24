@@ -19,10 +19,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     // Create an empty set
     set<int> s;
-    
+
     // Insert elements
     s.insert(6);
     s.insert(3);
@@ -35,17 +36,21 @@ int main() {
 
     // Traverse and print the set (using range-based for loop)
     cout << "Set elements: ";
-    for (int x : s) {
-        cout << x << " ";  // Output: -12 1 2 3 6 31 311
+    for (int x : s)
+    {
+        cout << x << " "; // Output: -12 1 2 3 6 31 311
     }
     cout << endl;
 
     // Find an element (e.g., 2)
     int x = 2;
     auto ptr = s.find(x);
-    if (ptr == s.end()) {
+    if (ptr == s.end())
+    {
         cout << x << " not found" << endl;
-    } else {
+    }
+    else
+    {
         int dis = distance(s.begin(), ptr);
         cout << x << " found at position: " << dis << endl;
     }
@@ -53,39 +58,46 @@ int main() {
     // Erase the first element
     s.erase(s.begin());
     cout << "After deleting first element: ";
-    for (int x : s) {
-        cout << x << " ";  // Output: 1 2 3 6 31 311
+    for (int x : s)
+    {
+        cout << x << " "; // Output: 1 2 3 6 31 311
     }
     cout << endl;
 
     // Erase the last element
     s.erase(--s.end());
     cout << "After deleting last element: ";
-    for (int x : s) {
-        cout << x << " ";  // Output: 1 2 3 6 31
+    for (int x : s)
+    {
+        cout << x << " "; // Output: 1 2 3 6 31
     }
     cout << endl;
 
     // Erase a specific element (e.g., 3)
     s.erase(3);
     cout << "After deleting 3: ";
-    for (int x : s) {
-        cout << x << " ";  // Output: 1 2 6 31
+    for (int x : s)
+    {
+        cout << x << " "; // Output: 1 2 6 31
     }
     cout << endl;
 
     // Check if an element (e.g., 2) is present
     auto itr = s.find(2);
-    if (itr == s.end()) {
-        cout << "2 not found" << endl;  // Output: 2 not found
-    } else {
-        s.erase(itr);  // Erase element using iterator
+    if (itr == s.end())
+    {
+        cout << "2 not found" << endl; // Output: 2 not found
     }
-    
+    else
+    {
+        s.erase(itr); // Erase element using iterator
+    }
+
     // Print set after deletion
     cout << "After deleting 2: ";
-    for (int x : s) {
-        cout << x << " ";  // Output: 1 6 31
+    for (int x : s)
+    {
+        cout << x << " "; // Output: 1 6 31
     }
     cout << endl;
 }
