@@ -11,7 +11,7 @@ int main()
         cin >> v[i];
     }
     // sort
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end()); //STL for sorting
     cout << "Vector after sorting: " << endl;
     for (int i = 0; i < n; i++)
         cout << v[i] << " ";
@@ -29,12 +29,12 @@ int main()
         return 0;
     }
 
-    // lower bound :
+    // lower bound STL:
     auto lb = lower_bound(v.begin(), v.end(), target);
     int index = lb - v.begin();
     cout << "found at: " << index << endl;
 
-    // upper bound
+    // upper bound STL:
     auto ub = upper_bound(v.begin(), v.end(), target);
     int id = ub - v.begin();
     cout << "found at: " << id << endl;

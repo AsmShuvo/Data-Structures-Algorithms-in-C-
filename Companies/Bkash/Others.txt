@@ -1,0 +1,20 @@
+What is Concurrency Control in Databases?
+
+What is function overriding in Object-Oriented Programming? How is it different from overloading?
+
+What is inheritance in Object-Oriented Programming?
+What is database normalization? What are its benefits and common normal forms?
+How can you generate random numbers in your preferred programming language?
+List and explain some basic Linux commands and their typical use cases.
+
+What is a deadlock in computing? How can it be prevented or resolved?
+
+What is database normalization? What are its benefits and common normal forms?
+
+How can you generate random numbers in your preferred programming language?
+
+How can you compare the contents of two text files to determine if they are identical?
+
+What happens when you type google.com and press enter in your search bar
+
+What happens when you copy a file in a computer? Are the copied file and the original file the same?
